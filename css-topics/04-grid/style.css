@@ -142,8 +142,16 @@ h3 {
   border: 2px solid #a775f1;
 }
 
+.grid-col-span-2 {
+  grid-column: span 2; /* Shorthand for 'grid-column-start' and 'grid-column-end'. */
+}
+
 /* components */
 .testimonial-grid {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(4, 1fr);
+  
   padding-block: 2rem;
   width: min(95%, 70rem);
   margin-inline: auto;
@@ -154,6 +162,17 @@ h3 {
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
+}
+
+.testimonial:last-child {
+  grid-column-start: 4;
+
+  grid-row-start: 1;
+  /* grid-row-end: span 2; */
+  /* OR */
+  grid-row-end: 3;
+  /* OR */
+  /* grid-row: 1 / span 2; */
 }
 
 .testimonial.quote {
