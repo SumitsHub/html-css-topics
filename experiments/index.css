@@ -1,0 +1,29 @@
+/* CSS Specificity */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+}
+
+
+.parent-container .child {
+    background-color: blueviolet;
+} 
+
+.container .child {
+    background-color: azure;
+}
+
+
+
+.parent-container div.child {
+    width: 200px;
+    height: 200px;
+}
+
+.child {
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    margin: 0 auto;
+}

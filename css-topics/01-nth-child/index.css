@@ -1,0 +1,124 @@
+:root {
+    --hover-color: #11358a;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #322f55;
+}
+
+.main-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.fdc {
+    flex-direction: column;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.aic {
+    align-items: center;
+}
+
+.row-container {
+    width: 70%;
+}
+
+.row-container > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #536fb1;
+    padding: 0 10px;
+}
+
+.row-container div p {
+    width: 150px;
+}
+
+.child-container {
+    display: flex;
+    gap: 20px;
+}
+ul {
+    list-style: none;
+}
+.child-container li {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    line-height: 25px;
+    text-align: center;
+    background-color: aliceblue;
+    color: #000;
+    border-radius: 50%;
+}
+
+.first-child:hover li:first-child {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.last-child:hover li:last-child {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.nth-child-2:hover li:nth-child(2) {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.nth-child-3n:hover li:nth-child(3n) {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.nth-child-odd:hover li:nth-child(odd) {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.nth-child-even:hover li:nth-child(even) {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.nth-child-n4:hover li:nth-child(n+4) {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.nth-child-3n-1:hover li:nth-child(3n-1) {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.nth-child-n3:hover li:nth-child(-n+3) {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.nth-last-child-2:hover li:nth-last-child(2) {
+    background-color: var(--hover-color);
+    color: #fff;
+}
