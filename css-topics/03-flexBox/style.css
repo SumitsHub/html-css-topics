@@ -1,0 +1,35 @@
+ul {
+  list-style: none;
+  border: 5px solid #dfdfdf;
+  padding: 0;
+
+  /* width: 600px; */
+}
+
+li {
+  border: 5px solid greenyellow;
+}
+.list-container {
+  display: flex;
+  gap: 0.5em;
+
+  flex-direction: column;
+}
+
+.list-item {
+  /* flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;  */
+  /* it's similar to width property but with few differences */
+  /* flex-basis can't be 0px unlike width */
+
+  /* Short Hand */
+  flex: 1;
+}
+
+@media screen and (min-width: 680px) {
+  .list-container {
+    flex-direction: row;
+    gap: 1.5em;
+  }
+}
