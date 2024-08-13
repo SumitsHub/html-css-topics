@@ -152,6 +152,15 @@ h3 {
   display: grid;
   gap: 1.5em;
   /* grid-template-columns: repeat(4, 1fr); */
+
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+  'one'
+  'two'
+  'three'
+  'four'
+  'five'
+  ;
   
   padding-block: 2rem;
   width: min(95%, 70rem);
@@ -176,18 +185,45 @@ h3 {
   /* grid-row: 1 / span 2; */
 }
 
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
+
 @media screen and (min-width: 40em) {
   .grid-col-span-2 {
-    grid-column: span 2; /* Shorthand for 'grid-column-start' and 'grid-column-end'. */
+    /* grid-column: span 2;  */
+    /* Shorthand for 'grid-column-start' and 'grid-column-end'. */
   }
 
-  .testimonial-grid {
+  /* .testimonial-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .testimonial:last-child {
     grid-column-start: 4;
     grid-row: 1 / span 2;
+  } */
+
+  .testimonial-grid {
+    grid-template-areas: 
+      'one one two five'
+      'three four four five';
   }
 }
 
