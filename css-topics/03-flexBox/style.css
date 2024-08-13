@@ -12,8 +12,12 @@ li {
 .list-container {
   display: flex;
   gap: 0.5em;
+  height: 10vh;
 
   flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
 }
 
 .list-item {
@@ -24,8 +28,14 @@ li {
   /* flex-basis can't be 0px unlike width */
 
   /* Short Hand */
-  flex: 1;
+  /* flex: 1; */
 }
+
+.list-item:nth-child(odd) {
+  align-self: flex-start;
+}
+
+/* NOTE: justify-self don't work with flex */
 
 .parent {
     width: 400px;
