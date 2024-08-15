@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline JS</title>
+</head>
+
+<body>
+    <!-- Below lines shows how to use inline JS in HTML in onclick -->
+    <button onclick="document.getElementById('bulbImg').src='pic_bulbon.gif'">
+        Turn ON
+    </button>
+    <img id="bulbImg" src="./pic_bulboff.gif" alt="bulb" />
+    <button onclick="document.getElementById('bulbImg').src='pic_bulboff.gif'">
+        Turn OFF
+    </button>
+    <br /> <br />
+
+    <button onclick="this.innerText = 'Text Changed'">Change Text</button>
+</body>
+
+</html>
