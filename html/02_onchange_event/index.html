@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange event in HTML input</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter text..." onchange="handleChange(event)">
+    <p id="output"></p>
+
+    <script>
+        // The onchange event is triggered when the input element loses focus (i.e., when you click outside the input field or press the Enter key), and the value has changed.
+        // f you want to capture the event immediately when the user types, you should use the oninput event instead of onchange
+        function handleChange(e) {
+            let inpValue = e.target.value;
+            console.log(inpValue);
+            document.getElementById('output').innerText = inpValue;
+        }
+    </script>
+</body>
+
+</html>
