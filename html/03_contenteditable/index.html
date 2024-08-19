@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContentEditable</title>
+    <style>
+        .container {
+            width: 90%;
+            height: 300px;
+            border: 2px double #033c3c;
+
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+
+        }
+
+        .container>div {
+            border: 1px solid black;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text" contenteditable oninput="console.log(event.target.innerText)">
+            Text
+        </div>
+    </div>
+</body>
+
+</html>
