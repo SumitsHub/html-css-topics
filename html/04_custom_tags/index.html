@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Tags</title>
+</head>
+
+<body>
+    <customTag1>
+        Custom Tag #1
+    </customTag1>
+
+    <customTag1>
+        Custom Tag #1
+    </customTag1>
+
+
+    <customTag2>
+        <h1>Hey there</h1>
+    </customTag2>
+
+    <customTag2>
+        <span>Hey there</span>
+    </customTag2>
+    <customTag2>
+        <span>Hey there</span>
+    </customTag2>
+
+    <script>
+        let tag1 = document.getElementsByTagName('customTag1')[0];
+        console.dir(tag1.style.display); // "" -> all styles are set to ""
+    </script>
+</body>
+
+</html>
