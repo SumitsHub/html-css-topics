@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exploring "data-*" attributes in html</h1>
+    <hr />
+
+    <ul id="fruitsList" data-list-name="fruits">
+        <li data-content="Apple">Apple</li>
+        <li data-content="Banana">Banana</li>
+        <li data-content="Carrot">Carrot</li>
+        <li data-content="Data">Data</li>
+    </ul>
+
+    <ul id="dummyList"><li>Item 1</li><li>Item 2</li></ul>
+
+    <script>
+        let ul = document.getElementById('fruitsList');
+        console.log(ul.dataset); // DOMStringMap {listName: 'fruits'}
+
+        let li = ul.childNodes;
+        console.log(li); // NodeList(9) [text, li, text, li, text, li, text, li, text]
+        // NOTE: '\n' is considered as text node
+
+        let dummyList = document.getElementById('dummyList');
+        console.log(dummyList.childNodes); // NodeList(2) [li, li]
+        
+
+    </script>
+</body>
+
+</html>
