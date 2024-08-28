@@ -1,0 +1,113 @@
+/* position: relative */
+
+.container1 {
+    height: 700px;
+    width: 100%;
+    border: 1px solid #f4f1f8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container1 .parent1 {
+    height: 600px;
+    width: 500px;
+    border: 2px solid yellow;
+
+    /* IMP */
+    position: relative;
+    /* No effect of top, left, bottom, right */
+    top: 0;
+    right: 10px;
+    bottom: 5px;
+    left: -15px;
+}
+
+.container1 .parent1 > .child {
+    height: 220px;
+    width: 220px;
+    border: 2px solid red;
+
+    /* No effect on child if parent position is 'relative' */
+}
+
+
+/* position: absolute */
+.container2 {
+    height: 700px;
+    width: 100%;
+    border: 1px solid #f4f1f8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container2 .parent1 {
+    height: 500px;
+    width: 500px;
+    border: 2px solid yellow;
+
+    /* normal parent container with position 'static' default value */
+}
+
+.container2 .parent1 > .child1 {
+    height: 250px;
+    width: 250px;
+    border: 2px solid red;
+
+    position: absolute;
+    /* removes the element from normal document flow - child2 gets placed into this position*/
+}
+
+.container2 .parent1 > .child2 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid blue;
+
+    color: red;
+    /* this child 2 is behind the absolutely positioned child 1 */
+
+    z-index: 999999; 
+    /* no affect of z-index on absolute element */
+}
+
+/* position: absolute with top, right, bottom & left*/
+.container3 {
+    height: 700px;
+    width: 100%;
+    border: 1px solid #f4f1f8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container3 .parent1 {
+    height: 500px;
+    width: 500px;
+    border: 2px solid yellow;
+
+    /* normal parent container with position 'static' default value */
+}
+
+.container3 .parent1 > .child1 {
+    height: 250px;
+    width: 250px;
+    border: 2px solid greenyellow;
+
+    position: absolute;
+    /* removes the element from normal document flow - child2 gets placed into this position*/
+    /* position element using top,left,right,bottom */
+    top: 0; 
+    right: 0;
+    /* bottom: 0; */
+    /* moves element according to the nearest positioned element - in this case document body */
+}
+
+.container3 .parent1 > .child2 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid blue;
+}
