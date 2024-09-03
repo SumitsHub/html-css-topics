@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-Elements Example</title>
+    <style>
+      /* ::before - Inserts content before an element's content. */
+      p::before {
+        content: "Note: ";
+        color: red;
+      }
+
+      /* ::after - Inserts content after an element's content. */
+      p::after {
+        content: "!";
+        color: blue;
+      }
+
+      /* ::first-line - Styles the first line of an element. */
+      p::first-line {
+        font-weight: bold;
+      }
+
+      /* ::first-letter - Styles the first letter of an element. */
+      p::first-letter {
+        font-size: 2em;
+        color: green;
+      }
+
+      /* ::selection - Styles the portion of an element that is selected by the user. */
+      ::selection {
+        background: yellow;
+        color: black;
+      }
+
+      /* ::before pseudo-element */
+      .example::before {
+        content: "Start: ";
+        display: block;
+        color: red;
+        font-weight: bold;
+      }
+
+      /* ::after pseudo-element */
+      .example::after {
+        content: " End.";
+        display: block;
+        color: blue;
+        font-weight: bold;
+      }
+
+      /* ::first-line pseudo-element */
+      .example::first-line {
+        font-weight: bold;
+        color: green;
+      }
+
+      /* ::first-letter pseudo-element */
+      .example::first-letter {
+        font-size: 2em;
+        color: purple;
+      }
+
+      /* ::selection pseudo-element */
+      ::selection {
+        background: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is a paragraph to demonstrate pseudo-elements.</p>
+
+    <hr />
+
+    <p class="example">
+      This is a paragraph to demonstrate pseudo-elements. The first line and the
+      first letter are styled differently.
+    </p>
+  </body>
+</html>

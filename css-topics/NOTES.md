@@ -1,6 +1,13 @@
 # General CSS Concepts
 
-## CSS Box Model
+## Table Contents
+01. CSS Box Model
+02. Outline - CSS Property
+03. CSS Positioning
+04. Pseudo Classes & Pseudo Elements
+
+
+### 01. CSS Box Model
 - CSS box model essentially is a box that wraps around every HTML element. - Every element in  CSS is considered as box.
 - It consists of: content, padding, border and margin.
 - Width don't consist of padding and border by default.
@@ -8,12 +15,12 @@
 - The box's total width & height stops at border.
 
 
-## Outline - CSS Property
+### 02. Outline - CSS Property
 - Outline is an outer line to border of box
 - This doesn't include in the width of the element
 
 
-## CSS Positioning
+### 03. CSS Positioning
 - position: static
   - default view
   - element positioned in the document according to the normal flow
@@ -34,3 +41,34 @@
   - The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left. 
   - The offset does not affect the position of any other elements.
   - sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when overflow is hidden, scroll, auto, or overlay), even if that ancestor isn't the nearest actually scrolling ancestor.
+
+
+### 04. Pseudo Classes & Pseudo Elements
+#### Pseudo-classes
+Pseudo-classes in CSS are used to define the special states of an element. 
+They can be used to style an element when it is in a certain state, such as when it is hovered over, focused, or visited.
+
+#### Pseudo Elements
+Pseudo-elements in CSS are used to style specific parts of an element. 
+They allow you to apply styles to a part of the content of an element, such as the first letter or line, or to insert content before or after an element.
+Examples:
+::after - p::after - Insert something after the content of each <p> element
+::before - p::before - Insert something before the content of each <p> element
+::first-letter - p::first-letter - Selects the first letter of each <p> element
+::first-line - p::first-line - Selects the first line of each <p> element
+::marker - ::marker - Selects the markers of list items
+::selection - p::selection - Selects the portion of an element that is selected by a user 
+
+#### Difference Between Pseudo-Classes and Pseudo-Elements
+- Pseudo-Classes: Used to define the special state of an element. They are prefixed with a single colon (:). Examples include :hover, :focus, :nth-child, etc.
+- Pseudo-Elements: Used to style specific parts of an element. They are prefixed with a double colon (::). Examples include ::before, ::after, ::first-line, etc.
+
+#### Double colon notation - ':after' and '::after'
+
+- :after
+Single Colon (:): This is the older syntax used in CSS2.
+Backward Compatibility: It is still supported by browsers for backward compatibility with older stylesheets.
+
+- ::after
+Double Colon (::): This is the newer syntax introduced in CSS3 to distinguish pseudo-elements from pseudo-classes.
+Modern Standard: It is the recommended syntax for defining pseudo-elements according to the CSS3 specification.

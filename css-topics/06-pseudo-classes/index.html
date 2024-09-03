@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-Classes Example</title>
+    <style>
+      /* :hover - Styles an element when the mouse pointer is over it. */
+      a:hover {
+        background-color: yellow;
+      }
+
+      /* :focus - Styles an element when it has focus (e.g., when clicked or tabbed into). */
+      input:focus {
+        border: 2px solid blue;
+      }
+
+      /*  :active - Styles an element when it is being activated (e.g., when a button is being clicked). */
+      a:active {
+        color: red;
+      }
+
+      /*  :visited - Styles links that have been visited. */
+      a:visited {
+        color: purple;
+      }
+
+      /* :first-child - Styles the first child element of a parent. */
+      p:first-child {
+        font-weight: bold;
+      }
+
+      /* :last-child - Styles the last child element of a parent. */
+      p:last-child {
+        font-style: italic;
+      }
+
+      /* :nth-child(n) - Styles the nth child element of a parent. */
+      li:nth-child(2) {
+        color: green;
+      }
+
+      /* :not(selector) - Styles elements that do not match the selector. */
+      p:not(.special) {
+        color: gray;
+      }
+
+      /* :before - Inserts content before an element. */
+      h1:before {
+        content: "Before Content ";
+        color: red;
+      }
+
+      /* :after - Inserts content after an element. */
+      h1:after {
+        content: "!";
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p class="special">Special paragraph</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <a href="#">Link</a>
+    <input type="text" placeholder="Focus me" />
+  </body>
+</html>
