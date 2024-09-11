@@ -6,6 +6,7 @@
 03. CSS Positioning
 04. Pseudo Classes & Pseudo Elements
 05. Media Queries
+06. Variables in CSS
 
 
 ### 01. CSS Box Model
@@ -19,6 +20,7 @@
 ### 02. Outline - CSS Property
 - Outline is an outer line to border of box
 - This doesn't include in the width of the element
+- NOTE: border is included in width of element by default
 
 
 ### 03. CSS Positioning
@@ -131,3 +133,25 @@ You can also link to different stylesheets for different media and different wid
 <link rel="stylesheet" media="screen and (min-width: 480px)" href="example1.css">
 <link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="example2.css">
 ```
+
+### 06. Variables in CSS
+#### The var() Function
+The var() function is used to insert the value of a CSS variable.
+CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the variables with JavaScript, and change the variables based on media queries.
+
+#### Syntax of the var() Function
+```css
+var(--name, value)
+```
+Where - 
+name	Required. The variable name (must start with two dashes)
+value	Optional. The fallback value (used if the variable is not found)
+
+Note: The variable name must begin with two dashes (--) and it is case sensitive!
+
+#### Global and Local Variables
+Global variables can be accessed/used through the entire document, while local variables can be used only inside the selector where it is declared.
+
+To create a variable with global scope, declare it inside the :root selector. The :root selector matches the document's root element.
+
+To create a variable with local scope, declare it inside the selector that is going to use it.

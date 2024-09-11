@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables in CSS</title>
+    <style>
+      /* create root level variables in css */
+      :root {
+        --main-bg-color: #f4f4f4;
+        --main-text-color: #570606;
+        --main-header-color: #1d1414;
+
+        --blue: #1e90ff;
+        --white: #ffffff;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        /* using variables */
+        background-color: var(--main-bg-color);
+        color: var(--main-text-color);
+      }
+
+      h1 {
+        color: var(--main-header-color);
+      }
+
+      div {
+        /* local variable */
+        --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+
+        /* using local scope variable */
+        box-shadow: var(--box-shadow);
+
+        /* override variable value */
+        --blue: #0f2d4b;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: var(--main-text-color);
+      }
+
+      /* change variable in @media query */
+      @media screen and (min-width: 450px) {
+        :root {
+          --main-bg-color: lightblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Using variables in CSS</h1>
+    <div>
+      <p>this is paragraph</p>
+
+      <button type="button" onclick="myFunction_get()">
+        Get CSS Variable with JavaScript
+      </button>
+      <button type="button" onclick="myFunction_set()">
+        Change CSS Variable with JavaScript
+      </button>
+    </div>
+
+    <script>
+      // Get the root element
+      var r = document.querySelector(":root");
+
+      // Create a function for getting a variable value
+      function myFunction_get() {
+        // Get the styles (properties and values) for the root
+        var rs = getComputedStyle(r);
+        // Alert the value of the --blue variable
+        alert("The value of --blue is: " + rs.getPropertyValue("--blue"));
+      }
+
+      // Create a function for setting a variable value
+      function myFunction_set() {
+        // Set the value of variable --blue to another value (in this case "lightblue")
+        r.style.setProperty("--blue", "lightblue");
+      }
+    </script>
+  </body>
+</html>
